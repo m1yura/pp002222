@@ -1,0 +1,8 @@
+-- Удаление старой БД
+DROP DATABASE IF EXISTS interior_design_db;
+
+-- Создание новой БД
+CREATE DATABASE interior_design_db;
+
+-- Восстановление из бэкапа
+psql -U postgres -h localhost -d interior_design_db -f backup_interior_design_20260212_143000.sql
